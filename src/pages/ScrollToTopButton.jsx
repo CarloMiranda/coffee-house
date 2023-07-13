@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../css/index.css';
 import { FaArrowUp } from "react-icons/fa";
 
 function ScrollToTopButton() {
