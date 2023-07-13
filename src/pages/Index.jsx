@@ -15,7 +15,7 @@ function Index(){
                     <Route index element={<Home />}/>
                     <Route path="/products" element={<Products />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/about" element={<Blogs />} />
+                    <Route path="/blogs" element={<Blogs />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="*" element={<NoFound />} />
                 </Route>

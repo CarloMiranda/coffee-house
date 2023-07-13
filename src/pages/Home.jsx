@@ -1,5 +1,6 @@
 function Home(){
     return(
+    <div className="container">
         <div className="container">
             {/* Hero Section */}
             <section className="row">
@@ -20,122 +21,70 @@ function Home(){
                         data-aos-offset="0">
                 <p><b>Coffee <span>|</span> Break Fast <span>|</span> Lunch <span>|</span> Dinner <span>|</span> Sandwiches <span>|</span> Espresso <span>|</span> Tea</b></p>
             </div>
-            {/* Gallery */}
-            <section className="row bg-light p-4 pt-5 mt-4 pb-5 rounded-5">
-                <div className="fw-bold text-center pb-5" 
-                                data-aos="fade-down"
-                                data-aos-easing="linear"
-                                data-aos-duration="1500">
-                    <h1>Gallery</h1>
-                </div>
-                    <div className="row">           
-                        <div className="col-md-4 py-3 py-md-2">
-                            <div className="card" data-aos="zoom-in">
-                            <img src="./images/image1.png" className="img-fluid" />
-                            </div>
-                        </div>
-                        <div className="col-md-4 py-3 py-md-2">
-                            <div className="card" data-aos="zoom-in">
-                            <img src="./images/image2.png" className="img-fluid" />
-                            </div>
-                        </div>
-                        <div className="col-md-4 py-3 py-md-2">
-                            <div className="card" data-aos="zoom-in">
-                            <img src="./images/image3.png" className="img-fluid" />
-                            </div>
-                        </div>  
-                        </div>
-            
-                        <div className="row">           
-                        <div className="col-md-4 py-3 py-md-2">
-                            <div className="card" data-aos="zoom-in">
-                            <img src="./images/image4.png" className="img-fluid" />
-                            </div>
-                        </div>
-                        <div className="col-md-4 py-3 py-md-2">
-                            <div className="card" data-aos="zoom-in">
-                            <img src="./images/image6.png" className="img-fluid" />
-                            </div>
-                        </div>
-                        <div className="col-md-4 py-3 py-md-2">
-                            <div className="card" data-aos="zoom-in">
-                            <img src="./images/image5.png" className="img-fluid" />
-                            </div>
-                        </div> 
-                    </div>
+        </div>
 
-            </section>
-
-            {/* Blog */}
-            <section className="row bg-light p-4 mt-5 pb-5 pt-5 rounded-5">
-                <div className="fw-bold text-center pb-5" data-aos="fade-down">
-                    <h1>Latest Blogs</h1>
-                </div>
-                <div className="container">
-                    <div className="row"> 
-                        <div className="col-md-4 py-3 py-md-2">
-                            <div className="card rounded-4">
-                                <img className="img-fluid rounded-4" data-aos="flip-left" src="./images/b1.png" />
-                                <div className="card-body">
-                                    <h3>Coffee House.</h3>
-                                    <h5>Admin / 6 April 2020</h5>
-                                    <p>Coffee House shares an abundance of resources in the coffee world 
-                                        that are extremely useful for individuals branching into the industry.</p><p hidden> 
-                                        Watch available videos for an overview of equipment and use the learning
-                                        center to improve your coffee knowledge. Read a library of informative 
-                                        articles including product maintenance, product reviews, and product 
-                                        comparisons. Prima Coffee also has an online shop where coffee equipment 
-                                        is available for purchase.</p>
-                                    <button className="border p-2 rounded" id="blog-btn">Read More.</button>
-                                </div>
-                            </div> 
-                        </div>
-                        <div className="col-md-4 py-3 py-md-2"> 
-                            <div className="card rounded-4">
-                                <img className="img-fluid rounded-4" data-aos="flip-up" src="./images/b2.png" />
-                                <div className="card-body">
-                                    <h3>Kate MacDonnell</h3>
-                                    <h5>Admin / 20 May 2021</h5>
-                                    <p>Kate has been a coffee enthusiast since she could reach the kitchen 
-                                        counter and a writer since she could hold a pen. A native of Colorado, 
-                                        she loves</p><p hidden> drinking amazing coffee all over the world and has an 
-                                        ever-growing collection of coffee gear.</p>
-                                        <p hidden>She’s sipped espresso with yuzu in Thailand, goat milk 
-                                        caramel lattes in Mexico, buttery white coffee in Malaysia, and 
-                                        cream cheese coffee in Korea. At a coffee plantation in Tanzania, 
-                                        Kate roasted coffee beans over an open fire — and probably still 
-                                        smells like coffee. Trust us: you can’t get that aroma out of your 
-                                        hair! At home, her favorite brewing method is smooth, clear 
-                                        Chemex — although the Wacaco Minipresso is a close second. 
-                                        She enjoys writing for coffee websites and sampling every kind 
-                                        of coffee known to man.</p>
-                                    <button className="border p-2 rounded" id="blog-btn">Read More.</button>
-                                </div>
-                            </div> 
-                        </div>
-                        <div className="col-md-4 py-3 py-md-2"> 
-                            <div className="card rounded-4">
-                                <img className="img-fluid rounded-4" data-aos="flip-right" src="./images/b3.png" />
-                                <div className="card-body">
-                                    <h3>Cofee House</h3>
-                                    <h5>Admin / 15 June 2022</h5>
-                                    <p>Coffe House demonstrates how we can all be involved in 
-                                        supporting the coffee supply chain in a positive manner through 
-                                        its superb educational</p><p hidden> resources. Work your way through articles 
-                                        on topics from farming and trade, to serving up an ethical coffee 
-                                        in your shop. Henry learned his barista skills in Ecuador. Perfect 
-                                        Daily Grind flourishes as a platform where diversity is encouraged, 
-                                        education is key, and the chain is the delicate heart of the coffee 
-                                        world. Whether you are a barista, own a coffee shop, or want to learn
-                                        more about the coffee process, Coffee House blogs will lead
-                                        you on the path of success.</p>
-                                    <button className="border p-2 rounded" id="blog-btn">Read More.</button>
-                                </div>
-                            </div>  
-                        </div> 
-              </div> 
+        <section className="container-fluid">
+            <div className="heading text-center m-4 p-4">
+                <h1>About Us</h1>
             </div>
-          </section>
+              <div className="row justify-content-center">
+                <div className="col-md-5">
+                    <h3>What Makes Our Coffee Special?</h3>
+                    <p>
+                      I wanted to take this time to let you know how grateful we are to 
+                      have you choosing us for your coffee needs. Quality coffee is a passion 
+                      for me and I am so thankful for your patronage which allows me to do this. 
+                      I wanted to share a little about our coffees, and why I think they are so 
+                      special. First of all, we buy our coffee from only the most reputable farms 
+                      and mills in Kona. Being a teacher in Kona for three decades, I taught some 
+                      of the farmers and some of their parents too - which goes a long way.
+                      Most boutique coffee companies sell an estate coffee, called this because 
+                      every bean comes from their estate which may be an acre or two of planted 
+                      coffee – exactly how we started out. When the beans are picked and dried, 
+                      they end up in a variety of sizes or grades. These boutique companies roast 
+                      all beans of varying size together because they cannot afford to waste any 
+                      beans regardless of quality and they don’t have enough beans for it to make 
+                      sense to separate them into different grades. What you end up with is an 
+                      inconsistent roast – the larger beans might not be roasted enough, while 
+                      the smaller beans are roasted too much and taste burnt. Our “Estate” coffee 
+                      is from a single grade so you get a much more uniform roast at the perfect 
+                      temperature for that size. 
+                    </p>
+                
+                    <div className="buttons p-2">
+                        <button data-id="about-btn" className="about-btn p-1 rounded">Learn More.</button>
+                    </div>
+                </div>
+                <div className=" col-md-5">
+                <div id="carouselExampleInterval" className="carousel slide carousel-fade" data-bs-ride="carousel" data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="3000">
+                      <div className="carousel-inner" role="listbox">
+                        <div className="carousel-item active" data-bs-interval="2000">
+                          <img src="./images/about.jpg" className="img-fluid"/>
+                        </div>
+                        <div className="carousel-item" data-bs-interval="2000">
+                          <img src="./images/about2.jpg" className="img-fluid"/>
+                        </div>
+                        <div className="carousel-item" data-bs-interval="2000">
+                          <img src="./images/about3.jpg" className="img-fluid"/>
+                        </div>
+                        <div className="carousel-item" data-bs-interval="2000">
+                          <img src="./images/about4.jpg" className="img-fluid"/>
+                        </div>
+                      </div>
+                      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                      </button>
+                      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                    </div>
+                </div>
+            </section>
     </div>
     )
 }

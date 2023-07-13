@@ -12,11 +12,9 @@ function Layout(){
             <div className="d-flex ms-auto">
                 
                 <Link to="/" className={`nav-link mx-3 ${ (location.pathname === `/`) ? `fw-bold active`: ``}`}>Home</Link>
-                
                 <Link to="/products" className={`nav-link mx-3 ${ (location.pathname === `/products`) ? `fw-bold active`: ``}`}>Products</Link>
-                
+                <Link to="/blogs" className={`nav-link mx-3 ${ (location.pathname === `/blogs`) ? `fw-bold active`: ``}`}>Blogs/Gallery</Link>
                 <Link to="/about" className={`nav-link mx-3 ${ (location.pathname === `/about`) ? `fw-bold active`: ``}`}>About</Link>
-              
                 <Link to="/contact" className={`nav-link mx-3 ${ (location.pathname === `/contact`) ? `fw-bold active`: ``}`}>Contact</Link>
                 
             </div>
