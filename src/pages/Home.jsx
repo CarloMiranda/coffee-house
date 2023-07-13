@@ -1,19 +1,24 @@
+import { Link } from 'react-router-dom';
+
 function Home(){
     return(
     <div className="container">
-        <div className="container">
             {/* Hero Section */}
+      <div className="home-content">      
             <section className="row">
-                <div className="col-md-7 my-auto" data-aos="fade-right" >
+                <div className="text-banner col-md-7 my-auto" data-aos="fade-right" >
                     <h1 className="fw-bold">Life is not better without Coffee</h1>
                     <h4>Put some Coffee in your day.</h4>
                     <h5>Eat. Drink. Enjoy.</h5>
-                    <button className="border p-2 rounded m-5">Order Online</button>
+                    
                 </div>
                 <div className="col-md-5 " data-aos="fade-left">
                     <img src="./images/coffee.png" className="img-fluid" />
                 </div>
             </section>
+            <div className="order-btn d-flex justify-content-center">
+              <Link to="/products" className="btn-link border p-3 rounded bg-light"><strong>Order Online</strong></Link>
+            </div>
             <div className="md-12 text-center m-5 p-5"  
                         data-aos="fade-zoom-in"
                         data-aos-easing="ease-in-back"
@@ -21,7 +26,6 @@ function Home(){
                         data-aos-offset="0">
                 <p><b>Coffee <span>|</span> Break Fast <span>|</span> Lunch <span>|</span> Dinner <span>|</span> Sandwiches <span>|</span> Espresso <span>|</span> Tea</b></p>
             </div>
-        </div>
 
         <section className="container-fluid">
             <div className="heading text-center m-4 p-4">
@@ -85,6 +89,7 @@ function Home(){
                     </div>
                 </div>
             </section>
+      </div>
     </div>
     )
 }

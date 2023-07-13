@@ -5,6 +5,24 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function Products(){    
     const menuRef = useRef(null);
+
+    const showCategory = (categoryName) => {
+        const categories = document.getElementsByClassName("category");
+        for (let i = 0; i < categories.length; i++) {
+            categories[i].style.display = "none";
+        }
+
+        if (categoryName === 'all') {
+            for (let i = 0; i < categories.length; i++) {
+                categories[i].style.display = "block";
+            }
+        } else {
+            const categoryElement = document.getElementById(categoryName);
+            if (categoryElement) {
+                categoryElement.style.display = "block";
+            }
+        }
+    };
     
       useEffect(() => {
         const menu = menuRef.current;
@@ -28,7 +46,7 @@ function Products(){
     
     return(
     <section>
-        <div className="container">
+        <div className="container justify-content-center">
             <header>
                 <div>
                     <img src="./images/header.png" alt="coffee image" className="img-fluid" />
@@ -36,26 +54,30 @@ function Products(){
             </header>
 
             <div className="menu text-center bg-primary p-3" ref={menuRef} id="menu-top">
-                <button data-id="all" className="button p-1 col-2 border rounded-3" data-aos="fade-right">
-                    All
-                </button>
-                <button data-id="popularitems" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-right">
-                    Popular Items
-                </button>
-                <button data-id="beverages" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
-                    Beverages
-                </button>
-                <button data-id="meals" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
-                    Meals
-                </button>
+            <button onClick={() => showCategory('all')} className="button p-1 col-2 border rounded-3" data-aos="fade-right">
+                All
+            </button>
+            <button onClick={() => showCategory('popular')} data-id="popularitems" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-right">
+                Popular Items
+            </button>
+            <button onClick={() => showCategory('beverages')} data-id="beverages" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
+                Beverages
+            </button>
+            <button onClick={() => showCategory('meals')} data-id="meals" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
+                Meals
+            </button>
             </div>
-        
-            <div className="all row justify-content-center">
-                <div className="panel col-md-10" id="all">
-                    <h3><b>All</b></h3>
-                    <section className="popular-items row justify-content-center">
-                        <p>Popular Items</p>
-                        <hr />
+            
+            <div className="all-menu">
+                <div id="all" className="category mt-4">
+                    <h2><strong>All Items</strong></h2>
+                    <hr />
+                </div>
+
+                <div id="popular" className="category text-center mt-5">
+                    <h3>Popular Items</h3>
+                    <hr />
+                    <div className="row justify-content-center">
                         <button className="menu-item my-3 ms-5 col-md-3 d-flex border rounded-4 shadow" data-aos="flip-left"
                             data-aos-easing="ease-out-cubic"
                             data-aos-duration="2000">
@@ -110,13 +132,16 @@ function Products(){
                                 <p>Php 250.00</p>
                             </div>
                         </button>
-                    </section>
-                    <section className="beverages row justify-content-center">
-                        <p>Beverages</p>
-                        <hr />
+                    </div>
+                </div>
+
+                <div id="beverages" className="category text-center mt-5">
+                    <h3>Beverages</h3>
+                    <hr />
+                    <div className="row justify-content-center">
                         <button className="menu-item my-3 ms-5 col-md-3 d-flex border rounded-4 shadow" data-aos="flip-left"
-                            data-aos-easing="ease-out-cubic"
-                            data-aos-duration="2000">
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
                             <img src="./menu/hotchoco.png" alt="hot chocolate" className="img-fluid" />
                             <div>
                                 <p>Hot Chocolate</p>
@@ -222,12 +247,13 @@ function Products(){
                                 <p>Php 250.00</p>
                             </div>
                         </button>
-                    </section>
+                    </div>
+                </div>
 
-
-                    <section className="meals row justify-content-center" id="menu-section">
-                        <p>Meals</p>
-                        <hr />
+                <div id="meals" className="category text-center mt-5">
+                    <h3>Meals</h3>
+                    <hr />
+                    <div className="row justify-content-center">
                         <button className="menu-item my-3 ms-5 col-md-3 d-flex border rounded-4 shadow" data-aos="flip-left"
                             data-aos-easing="ease-out-cubic"
                             data-aos-duration="2000">
@@ -336,7 +362,7 @@ function Products(){
                                 <p>Php 350.00</p>
                             </div>
                         </button>
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>              

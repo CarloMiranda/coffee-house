@@ -26,8 +26,8 @@ function Layout(){
     <>   
     <nav className="navbar shadow bg-light">
         <div className="container">
-            <a className="navbar-brand img-fluid ps-5" href="#"><img src="./images/logo.png" alt="Logo" /></a>
-            <div className="d-flex ms-auto">
+            <a className="navbar-brand img-fluid" href="#"><img src="./images/logo.png" alt="Logo" /></a>
+            <div className="nav-item d-flex">
                 
                 <Link to="/" className={`nav-link mx-3 ${ (location.pathname === `/`) ? `fw-bold active`: ``}`}>Home</Link>
                 <Link to="/products" className={`nav-link mx-3 ${ (location.pathname === `/products`) ? `fw-bold active`: ``}`}>Products</Link>
