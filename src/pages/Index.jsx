@@ -6,6 +6,7 @@ import Contact from './Contact';
 import NoFound from './NoFound';
 import Layout from './Layout';
 import Blogs from './Blogs';
+import Career from './Career';
 
 function Index(){
     return(
@@ -17,6 +18,7 @@ function Index(){
                     <Route path="/about" element={<About />} />
                     <Route path="/blogs" element={<Blogs />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/career" element={<Career />} />
                     <Route path="*" element={<NoFound />} />
                 </Route>
             </Routes>

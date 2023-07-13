@@ -16,6 +16,7 @@ function Layout(){
                 <Link to="/blogs" className={`nav-link mx-3 ${ (location.pathname === `/blogs`) ? `fw-bold active`: ``}`}>Blogs/Gallery</Link>
                 <Link to="/about" className={`nav-link mx-3 ${ (location.pathname === `/about`) ? `fw-bold active`: ``}`}>About</Link>
                 <Link to="/contact" className={`nav-link mx-3 ${ (location.pathname === `/contact`) ? `fw-bold active`: ``}`}>Contact</Link>
+                <Link to="/career" className={`nav-link mx-3 ${ (location.pathname === `/career`) ? `fw-bold active`: ``}`}>Career</Link>
                 
             </div>
         </div>
