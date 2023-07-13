@@ -41,6 +41,11 @@
   text-decoration: none !important;
 }
 
+/* Products */
+.products {
+  margin-bottom: 100px!important;
+}
+
 
 @media screen and (max-width:414px){
   .navbar .container {
