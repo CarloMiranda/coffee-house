@@ -9,17 +9,17 @@ function Layout(){
 
     useEffect(() => {
         if (location.pathname === '/') {
-            document.title = 'Carlo Miranda | Home';
+            document.title = 'Home | Coffee House';
         } else if (location.pathname === '/products') {
-            document.title = 'Coffee House | Products';
+            document.title = 'Products | Coffee House';
         } else if (location.pathname === '/blogs') {
-            document.title = 'Coffee House | Blogs/Gallery';
+            document.title = 'Blogs/Gallery | Coffee House';
         } else if (location.pathname === '/about') {
-            document.title = 'Coffee House | About';
+            document.title = 'About | Coffee House';
         } else if (location.pathname === '/contact') {
-            document.title = 'Coffee House | Contact';
+            document.title = 'Contact | Coffee House';
         } else if (location.pathname === '/career') {
-            document.title = 'Coffee House | Career';
+            document.title = 'Career | Coffee House';
         }
     }, [location]);
     return(
