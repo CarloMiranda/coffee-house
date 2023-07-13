@@ -2,7 +2,10 @@ function About(){
     return(
     <div className="container">
         <section className="container-fluid">
-            <div className="heading text-center m-4 p-4">
+            <div className="heading text-center m-4 p-4" 
+                                data-aos="fade-down"
+                                data-aos-easing="linear"
+                                data-aos-duration="1000">
                 <h1>About Us</h1>
             </div>
               <div className="row justify-content-center">

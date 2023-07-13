@@ -10,7 +10,7 @@ function Blogs(){
                 <div className="fw-bold text-center pb-5" 
                                 data-aos="fade-down"
                                 data-aos-easing="linear"
-                                data-aos-duration="1500">
+                                data-aos-duration="1000">
                     <h1>Gallery</h1>
                 </div>
                     <div className="row">           

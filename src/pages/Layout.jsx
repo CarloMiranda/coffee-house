@@ -1,9 +1,27 @@
+import React, { useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import '../css/Index.css';
+import ScrollToTopButton from "./ScrollToTopButton";
+
 function Layout(){
 
     const location = useLocation();
 
+    useEffect(() => {
+        if (location.pathname === '/') {
+            document.title = 'Carlo Miranda | Home';
+        } else if (location.pathname === '/products') {
+            document.title = 'Coffee House | Products';
+        } else if (location.pathname === '/blogs') {
+            document.title = 'Coffee House | Blogs/Gallery';
+        } else if (location.pathname === '/about') {
+            document.title = 'Coffee House | About';
+        } else if (location.pathname === '/contact') {
+            document.title = 'Coffee House | Contact';
+        } else if (location.pathname === '/career') {
+            document.title = 'Coffee House | Career';
+        }
+    }, [location]);
     return(
     <>   
     <nav className="navbar shadow bg-light">
@@ -33,6 +51,7 @@ function Layout(){
         <p>&copy; Copyright <strong> <span>Coffee House</span></strong>. All Rights reserved</p>
     </div>
     </div>
+    <ScrollToTopButton />
     </>    
     )
 }
