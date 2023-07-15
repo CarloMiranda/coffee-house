@@ -17,7 +17,7 @@ function Home(){
                 </div>
             </section>
             <div className="order-btn d-flex justify-content-center">
-              <Link to="/products" className="btn-link border p-3 rounded bg-light"><strong>Order Online</strong></Link>
+              <Link to="/products" className="btn-link border p-3 rounded bg-light shadow"><strong>Order Online</strong></Link>
             </div>
             <div className="md-12 text-center m-5 p-5"  
                         data-aos="fade-zoom-in"

@@ -39,13 +39,35 @@
 /* Home */
 .btn-link {
   text-decoration: none !important;
+  transition: transform 0.3s ease;
+}
+
+.btn-link:hover {
+  background: white!important;
+  transform: scale(.9);
 }
 
 /* Products */
 .products {
   margin-bottom: 100px!important;
 }
+.menu-item:hover {
+  background: white;
+}
 
+.menu-item img {
+  width: 70px;
+  height: 70px;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.price {
+  position: absolute;
+  bottom: 0%;
+}
 
 @media screen and (max-width:414px){
   .navbar .container {
