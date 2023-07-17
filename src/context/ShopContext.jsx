@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
-import { BEVERAGES } from '../ItemsJson/Beverage';
-import { MEALS } from '../ItemsJson/Meal';
+import { BEVERAGES } from '../menus/Beverage';
+import { MEALS } from '../menus/Meal';
 
 export const ShopContext = createContext(null);
 

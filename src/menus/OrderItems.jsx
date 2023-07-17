@@ -1,6 +1,6 @@
 import React, { useContext} from 'react';
-import { BEVERAGES } from '../ItemsJson/Beverage';
-import {MEALS} from '../ItemsJson/Meal';
+import { BEVERAGES } from './Beverage';
+import {MEALS} from './Meal';
 import { ShopContext } from '../context/ShopContext';
 import { CartItem } from '../menus/CartItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

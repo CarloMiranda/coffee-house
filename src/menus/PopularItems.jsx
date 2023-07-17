@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
-import { BEVERAGES } from '../ItemsJson/Beverage';
-import { MEALS } from '../ItemsJson/Meal';
+import { BEVERAGES } from './Beverage';
+import { MEALS } from './Meal';
 
 
 

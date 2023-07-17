@@ -3,8 +3,8 @@ import Beverages from '../menus/Beverages/';
 import PopularItems from '../menus/PopularItems';
 import Meals from '../menus/Meals';
 import OrderItems from '../menus/OrderItems';
-import {BEVERAGES} from '../ItemsJson/Beverage';
-import {MEALS} from '../ItemsJson/Meal';
+import { BEVERAGES } from '../menus/Beverage';
+import { MEALS } from '../menus/Meal';
 
 function Products(){    
     const menuRef = useRef(null);
