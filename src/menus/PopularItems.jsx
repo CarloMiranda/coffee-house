@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import { BEVERAGES } from './Beverage';
 import { MEALS } from './Meal';
+import { message } from 'antd';
 
 
 
@@ -17,10 +18,31 @@ export const PopularItems = () => {
       <div className="products">
         {selectedItems.map(({ id, productName, productImage, price }) => {
           const cartItemAmount = cartItems[id];
+
+          const openMessage = () => {
+            message.config({
+              top: 60
+            });
+          
+            message.open({
+              key: id.toString(),
+              type: 'loading',
+              content: 'Loading...',
+            });
+            setTimeout(() => {
+              message.open({
+                key: id.toString(),
+                type: 'success',
+                content: 'Item Added!',
+                duration: 2,
+              });
+            }, 800);
+          };
             return (
                 <button
                     key={id}
-                    onClick={() => addToCart(id)}
+                    onClick={() => {addToCart(id);
+                                    openMessage()}}
                     className="add-item menu-item my-3 ms-5 col-md-2 text-start d-flex border rounded-4 shadow">
                     <span className="position-absolute badge rounded-pill bg-danger">
                         {cartItemAmount > 0 && <> {cartItemAmount}</>}

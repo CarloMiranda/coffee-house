@@ -5,6 +5,7 @@ import { ShopContext } from '../context/ShopContext';
 import { CartItem } from '../menus/CartItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCcMastercard, faCcVisa, faCcAmex, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
+import Swal from 'sweetalert2';
 
 export const OrderItems = () => {
     const { cartItems } = useContext(ShopContext);
@@ -30,6 +31,14 @@ export const OrderItems = () => {
     const taxrate = 0.12;
     const taxAmount = subtotal * taxrate;
     const total = subtotal + deliveryFee + taxAmount;
+
+    const handlePlaceOrder = () => {
+        Swal.fire(
+            'Good job!',
+            'You ordered successfully!',
+            'success'
+          )
+    };
     
     return(
     <section>
@@ -62,7 +71,7 @@ export const OrderItems = () => {
                                                                     <div className='d-flex'>
                                                                      
                                                                         <p className="mb-0"><span className="text-muted">Sort by:</span> <a href="#!"
-                                                                        className="text-body">Quantity <i className="fas fa-angle-down mt-1"></i></a></p>
+                                                                        className="text-body">Qty <i className="fas fa-angle-down mt-1"></i></a></p>
                                                                     </div>
                                                             </div>   
                                                                 <div className="cart">
@@ -144,7 +153,8 @@ export const OrderItems = () => {
                                                                     <p className="mb-2">₱ {total.toFixed(2)}</p>
                                                                 </div>   
                                                                 <div className="d-flex justify-content-center ">
-                                                                <button type="button" className="btn btn-info btn-block btn-lg">
+                                                                <button onClick={handlePlaceOrder}
+                                                                    type="button" className="btn btn-info btn-block btn-lg">
                                                                     Place Order
                                                                 </button>
                                                                 </div>

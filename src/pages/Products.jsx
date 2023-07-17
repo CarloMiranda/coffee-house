@@ -57,22 +57,19 @@ function Products(){
             </header>
 
             <div className="menu text-center bg-primary p-3" ref={menuRef} id="menu-top">
-            <button onClick={() => showCategory('all')} className="button p-1 col-2 border rounded-3" data-aos="fade-right">
-                All
-            </button>
-            <button onClick={() => showCategory('popular')} data-id="popularitems" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-right">
-                Popular Items
-            </button>
-            <button onClick={() => showCategory('beverages')} data-id="beverages" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
-                Beverages
-            </button>
-            <button onClick={() => showCategory('meals')} data-id="meals" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
-                Meals
-            </button>
+                <button onClick={() => showCategory('all')} className="button p-1 col-2 border rounded-3" data-aos="fade-right">
+                    All
+                </button>
+                <button onClick={() => showCategory('popular')} data-id="popularitems" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-right">
+                    Popular Items
+                </button>
+                <button onClick={() => showCategory('beverages')} data-id="beverages" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
+                    Beverages
+                </button>
+                <button onClick={() => showCategory('meals')} data-id="meals" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
+                    Meals
+                </button>
             </div>
-            
-            
-
 
         <div className="all-menu">
             <div id="all" className="category mt-4">
@@ -83,7 +80,7 @@ function Products(){
                 <div id="popular" className="category">
                     <h3>Popular Items</h3>
                     <hr />
-                    <div className="products">
+                    <div>
                         <PopularItems />
                     </div>
                 </div>
