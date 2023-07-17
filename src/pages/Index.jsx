@@ -7,21 +7,24 @@ import NoFound from './NoFound';
 import Layout from './Layout';
 import Blogs from './Blogs';
 import Career from './Career';
+import { ShopContextProvider } from '../context/ShopContext';
 
 function Index(){
     return(
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />}/>
-                    <Route path="/products" element={<Products />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/blogs" element={<Blogs />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/career" element={<Career />} />
-                    <Route path="*" element={<NoFound />} />
-                </Route>
-            </Routes>
+            <ShopContextProvider>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />}/>
+                        <Route path="/products" element={<Products />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/blogs" element={<Blogs />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/career" element={<Career />} />
+                        <Route path="*" element={<NoFound />} />
+                    </Route>
+                </Routes>
+            </ShopContextProvider>
         </BrowserRouter>
     )
 }

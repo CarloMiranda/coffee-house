@@ -3,6 +3,9 @@ import Beverages from '../menus/Beverages/';
 import PopularItems from '../menus/PopularItems';
 import Meals from '../menus/Meals';
 import OrderItems from '../menus/OrderItems';
+import {PRODUCTS} from '../ItemsJson/PopularItem';
+import {BEVERAGES} from '../ItemsJson/Beverage';
+import {MEALS} from '../ItemsJson/Meal';
 
 function Products(){    
     const menuRef = useRef(null);
@@ -46,7 +49,7 @@ function Products(){
       }, []);
     
     return(
-    <section className='products'>
+    <section className='items'>
         <div className="container justify-content-center">
             <header>
                 <div>
@@ -69,19 +72,43 @@ function Products(){
             </button>
             </div>
             
-            <div className="all-menu">
-                <div id="all" className="category mt-4">
+            
+
+
+        <div className="all-menu">
+            <div id="all" className="category mt-4">
                     <h2><strong>All Items</strong></h2>
                     <hr />
                 </div>
-                <div id="popular" className="category text-center mt-5">
-                    < PopularItems />
+                
+                <div id="popular" className="category">
+                    <h3>Popular Items</h3>
+                    <hr />
+                    <div className="products">
+                        {PRODUCTS.map((product) => (
+                            <PopularItems key={product.id} data={product}/>
+                        ))}
+                    </div>
                 </div>
-                <div id="beverages" className="category text-center mt-5">
-                    <Beverages />
+                
+                <div id="beverages" className="category">
+                    <h3>Beverages</h3>
+                    <hr />
+                    <div className="products">
+                        {BEVERAGES.map((product) => (
+                            <Beverages key={product.id} data={product}/>
+                        ))}
+                    </div>
                 </div>
-                <div id="meals" className="category text-center mt-5">
-                    < Meals />
+
+                <div id="meals" className="category">
+                    <h3>Meals</h3>
+                    <hr />
+                    <div className="products">
+                        {MEALS.map((product) => (
+                            <Meals key={product.id} data={product}/>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

@@ -48,7 +48,7 @@
 }
 
 /* Products */
-.products {
+.items {
   margin-bottom: 100px!important;
 }
 .menu-item:hover {
@@ -57,16 +57,25 @@
 
 .menu-item img {
   width: 70px;
-  height: 70px;
+  height: 100px;
 }
 
 .menu-item {
   position: relative;
+  width: 150px !important;
+  height: 110px;
 }
 
 .price {
   position: absolute;
   bottom: 0%;
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 @media screen and (max-width:414px){

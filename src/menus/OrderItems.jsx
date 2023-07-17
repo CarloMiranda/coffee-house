@@ -1,16 +1,32 @@
-
+import React, { useContext} from 'react';
+import { BEVERAGES } from '../ItemsJson/Beverage';
+import {MEALS} from '../ItemsJson/Meal';
+import { ShopContext } from '../context/ShopContext';
+import { CartItem } from '../menus/CartItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCcMastercard, faCcVisa, faCcAmex, faCcPaypal } from '@fortawesome/free-brands-svg-icons';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-function OrderItems(){
+export const OrderItems = () => {
+    const { cartItems } = useContext(ShopContext);
 
+    const combinedItems = [...BEVERAGES, ...MEALS];
+
+    const sortedItems = combinedItems.sort(
+        (a, b) => cartItems[b.id] - cartItems[a.id]
+    );
+
+    const totalItems = Object.values(cartItems).reduce(
+        (total, quantity) => total + quantity,
+        0
+    )
+    
     return(
     <section>
         <button type="button" className="btn btn-primary position-absolute bottom-0 end-0 me-5 mb-5 p-3 rounded-5 position-fixed" data-bs-toggle="modal" data-bs-target="#exampleModal" id="order">
             🛒 Your Orders
-            <span className="position-absolute translate-buttom badge rounded-pill bg-danger">
-                4<span className="visually-hidden">Added Items</span></span>
+            <span className="position-absolute badge rounded-pill bg-danger">
+                {totalItems}
+            <span className="visually-hidden">Added Items</span></span>
         </button>
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
@@ -35,89 +51,18 @@ function OrderItems(){
                                                                     <div className='d-flex'>
                                                                      
                                                                         <p className="mb-0"><span className="text-muted">Sort by:</span> <a href="#!"
-                                                                        className="text-body">price <i className="fas fa-angle-down mt-1"></i></a></p>
+                                                                        className="text-body">Quantity <i className="fas fa-angle-down mt-1"></i></a></p>
                                                                     </div>
                                                             </div>   
-                                                            <div className="card mb-3">
-                                                                <div className="row align-items-center">
-                                                                    <div className="col-md-3">
-                                                                         <img className=" img-fluid rounded-3" src="./menu/caramelmacchaiato.png"
-                                                                        alt="Shopping item"/>
+                                                                <div className="cart">
+                                                                    <div className="cardItems">
+                                                                        {sortedItems.map((product) => {
+                                                                            if (cartItems[product.id] !== 0) {
+                                                                                return <CartItem key={product.id} data={product} />;
+                                                                            }
+                                                                        })}
                                                                     </div>
-                                                                    <div className="col-md-3">
-                                                                        <p>Carammel macchiato</p>
-                                                                    </div>                                                                                                                                             
-                                                                    <div className="col-md-2">
-                                                                         <p>2pcs </p>
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <p >₱250</p>                 
-                                                                    </div>
-                                                                    <div className='col-md-1'>
-                                                                        <button className='trash border-0 bg-white'><FontAwesomeIcon icon={faTrash} /></button>
-                                                                    </div>                                                                       
-                                                                </div>
-                                                            </div>                                            
-                                                            <div className="card mb-3">
-                                                                <div className="row align-items-center">
-                                                                    <div className='col-md-3'>
-                                                                        <img src="./menu/icecoldbrew.png"
-                                                                        className="img-fluid rounded-3" alt="Shopping item"/>
-                                                                    </div>
-                                                                    <div className="col-md-3">
-                                                                        <p>Ice cold brew </p>
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <p>1pc</p>
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <p>₱250</p>
-                                                                    </div>
-                                                                    <div className='col-md-1'>
-                                                                        <button className='trash border-0 bg-white'><FontAwesomeIcon icon={faTrash} /></button>
-                                                                    </div> 
-                                                                </div> 
-                                                            </div>                                           
-                                                            <div className="card mb-3">
-                                                                <div className="row align-items-center">
-                                                                    <div className='col-md-3'>
-                                                                        <img src="./menu/bfast1.png"
-                                                                            className="img-fluid rounded-3" alt="Shopping item"/>
-                                                                    </div>
-                                                                    <div className="col-md-3">
-                                                                        <p>Chicken cheese biscuit</p>
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <p>1pc</p>
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <p>₱350</p>
-                                                                    </div>
-                                                                    <div className='col-md-1'>
-                                                                        <button className='trash border-0 bg-white'><FontAwesomeIcon icon={faTrash} /></button>
-                                                                    </div> 
-                                                                </div>     
-                                                            </div>                                            
-                                                            <div className="card mb-3 mb-lg-0">
-                                                                <div className="row align-items-center">
-                                                                    <div className='col-md-3'>
-                                                                        <img src="./menu/bfast3.png"
-                                                                            className="img-fluid rounded-3" alt="Shopping item"/>
-                                                                    </div>
-                                                                    <div className="col-md-3">
-                                                                        <p>Nanna's cinn rolls</p>
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <p>1pc</p>
-                                                                    </div>
-                                                                    <div className="col-md-2">
-                                                                        <p>₱350</p>
-                                                                    </div>
-                                                                    <div className='col-md-1'>
-                                                                    <button className='trash border-0 bg-white'><FontAwesomeIcon icon={faTrash} /></button>
-                                                                    </div> 
-                                                                </div>
-                                                            </div>                              
+                                                                </div>                            
                                                         </div>            
                                                         <div className="col-lg-5">                                
                                                             <div className="card bg-primary text-white rounded-3">
