@@ -8,9 +8,9 @@ function Contact(){
                     <div className="heading">
                         <h1>Contact Us</h1>
                     </div>
-                    <input type="text" className="form-control m-3" placeholder="Name" aria-label="default input"/>
-                    <input type="email" className="form-control m-3" placeholder="Email" aria-label="default input"/>
-                    <input type="number" className="form-control m-3" placeholder="Phone" aria-label="default input"/>
+                    <input autoComplete="name" type="text" id="name" className="form-control m-3" placeholder="Name" aria-label="default input"/>
+                    <input autoComplete="email" type="email" id="email" className="form-control m-3" placeholder="Email" aria-label="default input"/>
+                    <input autoComplete="number" type="number"  id="number" className="form-control m-3" placeholder="Phone" aria-label="default input"/>
                     <textarea className="form-control m-3" id="comments"  placeholder="Your Message" aria-label="default input"></textarea>
                     <button id="contact-btn" className="form-control bg-primary m-3">Send Message</button>
                 </div> 

@@ -3,7 +3,6 @@ import Beverages from '../menus/Beverages/';
 import PopularItems from '../menus/PopularItems';
 import Meals from '../menus/Meals';
 import OrderItems from '../menus/OrderItems';
-import {PRODUCTS} from '../ItemsJson/PopularItem';
 import {BEVERAGES} from '../ItemsJson/Beverage';
 import {MEALS} from '../ItemsJson/Meal';
 
@@ -85,9 +84,7 @@ function Products(){
                     <h3>Popular Items</h3>
                     <hr />
                     <div className="products">
-                        {PRODUCTS.map((product) => (
-                            <PopularItems key={product.id} data={product}/>
-                        ))}
+                        <PopularItems />
                     </div>
                 </div>
                 

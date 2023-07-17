@@ -19,6 +19,17 @@ export const OrderItems = () => {
         (total, quantity) => total + quantity,
         0
     )
+
+    const subtotal = sortedItems.reduce((total, product) => {
+        const quantity = cartItems[product.id];
+        const itemPrice = product.price;
+        return total + quantity * itemPrice;
+    }, 0);
+
+    const deliveryFee = 60;
+    const taxrate = 0.12;
+    const taxAmount = subtotal * taxrate;
+    const total = subtotal + deliveryFee + taxAmount;
     
     return(
     <section>
@@ -45,9 +56,9 @@ export const OrderItems = () => {
                                                     <div className="row">                            
                                                         <div className="col-lg-7">                                                                                       
                                                             <div className="d-flex justify-content-between align-items-center mb-4">
-                                                                <div>
-                                                                    <p className="mb-0" id="selected-count"><b>You have 4 orders!</b></p>
-                                                                </div>
+                                                            <p className="mb-0" id="selected-count">
+                                                                <b>You have {totalItems} {totalItems === 0 ? 'no order yet' : 'orders'}!</b>
+                                                            </p>
                                                                     <div className='d-flex'>
                                                                      
                                                                         <p className="mb-0"><span className="text-muted">Sort by:</span> <a href="#!"
@@ -70,8 +81,8 @@ export const OrderItems = () => {
                                                                     <input type="text" className="form-control" placeholder="Full Name" aria-label="default input"/><br/>
                                                                     <input type="email" className="form-control" placeholder="Delivery Address" aria-label="default input"/><br/>
                                                                     <input type="number" className="form-control" placeholder="Contact" aria-label="default input"/><br/>
-                                                                    <input type="checkbox" id="option2"/>
-                                                                    <label htmlFor="option2" className="form-text" id="cod">Cash on delivery</label>                                
+                                                                    <input type="checkbox" id="option2"/><span> </span>
+                                                                    <label htmlFor="option2" className="form-text text-white fs-5" id="cod"><strong>Cash on delivery</strong></label>                                
                                                                         <p className="small mb-2">Card type</p>
                                                                         <div>
                                                                             <a href="#!" type="submit" className="text-white">
@@ -115,18 +126,22 @@ export const OrderItems = () => {
                                                                 </div>
                                                             </div>        
                                                         </form>
-                                                            <hr className="my-4"/>                                    
+                                                            <hr className="my-4"/>     
+                                                                <div className="d-flex justify-content-between">
+                                                                    <p className="mb-2">Total Items</p>
+                                                                    <p className="mb-2">{totalItems} {totalItems < 2 ? 'pc' : 'pcs' }</p>
+                                                                </div>                               
                                                                 <div className="d-flex justify-content-between">
                                                                     <p className="mb-2">Subtotal</p>
-                                                                    <p className="mb-2">₱ 1515.00</p>
+                                                                    <p className="mb-2">₱ {subtotal.toFixed(2)}</p>
                                                                 </div>
                                                                 <div className="d-flex justify-content-between">
                                                                     <p className="mb-2">Delivery Fee</p>
-                                                                    <p className="mb-2">₱ 80.00</p>
+                                                                    <p className="mb-2">₱ {deliveryFee.toFixed(2)}</p>
                                                                 </div>                                    
                                                                 <div className="d-flex justify-content-between mb-4">
-                                                                    <p className="mb-2">Total(Incl. taxes)</p>
-                                                                    <p className="mb-2">₱ 1595.00</p>
+                                                                    <p className="mb-2">Total(Incl. taxes 12%)</p>
+                                                                    <p className="mb-2">₱ {total.toFixed(2)}</p>
                                                                 </div>   
                                                                 <div className="d-flex justify-content-center ">
                                                                 <button type="button" className="btn btn-info btn-block btn-lg">
