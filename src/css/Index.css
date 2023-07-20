@@ -66,7 +66,7 @@ html, body {
 
 .menu-item {
   position: relative;
-  width: 150px !important;
+  width: 170px !important;
   height: 110px;
   margin: 0 70px;
 }
@@ -139,14 +139,14 @@ html, body {
   }
 
   .menu-item {
-    width: 80px !important;
+    width: 100px !important;
     height: 70px;
     font-size: 5px;
   }
   
   .menu-item img {
-    width: 20px;
-    height: 40px;
+    width: 40px;
+    height: 50px;
   }
 
   .products {
@@ -154,7 +154,7 @@ html, body {
     display: grid;
     justify-content: center;
     grid-template-columns: 0fr 2fr;
-    margin: 10px -80px 0 0!important;
+    margin: 20px -80px 0 0!important;
   }
   
   .added-items {

@@ -39,7 +39,7 @@ export const Beverages = (props) => {
                     </span>
                 <img src={productImage} alt="hot chocolate" className="img-fluid" />
                 <div>
-                    <p className="mb-5">{productName}</p>
+                    <p className="product-name">{productName}</p>
                     <p className="price">Php {price}</p>
                 </div>
             </button>
