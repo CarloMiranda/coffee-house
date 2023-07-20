@@ -5,26 +5,28 @@ function Career(){
     return(
         // <!-- Content start -->
         <div className="container">
-            <div className="text-center m-5 p-5" id="topparagraph" data-aos="fade-down"
-                                data-aos-easing="linear"
-                                data-aos-duration="1000">
-                <h2 className="pb-4"><q>WORK WITH US NOW</q></h2>
-                <p className="pb-4">Coffee House has been a caring company from the very beginning. We care about who we are, who we serve and what we do. We want every guest to walk away from a Coffee House having experienced genuine and sincere customer service that puts a smile on their face and makes them just plain feel better.</p>
-                <p className="pb-4">Coffee shops occupy an important space in many of our lives because of their unique ability to fulfill so many of our needs: socializing, studying, working, resting, reading — in an atmosphere that suits our tastes and makes us feel like we belong. At their best, coffee shops are places that meet the needs of a community, while giving communities the space they need to get together.</p>
-                <p className="pb-4">This sense of community is what Coffee House Cafe is all about. In fact, the atmosphere that makes Just Love Coffee Cafe so special was created to be a complete 180 from the stuffy reputation that specialty coffee shops rightly or wrongly deserve.</p>
-            </div>
-            <div className="row" id="column">
-                <div className="col-md-6" id="centertext" >
-                    <h3>GOAL: PUT A SMILE ON EVERY FACE</h3>
-                    <p>“We wanted our space to be welcoming to everyone, whether they like high-end coffee or like Folgers,” says Jason Smith, Roastmaster with Coffee House Cafe. “We worked hard to create an atmosphere that went beyond coffee, as well — from the charitable nature of our brand and the inclusivity of our design that opens the space to a wide variety of social and independent activity, to the playful nature of our food menu that really creates a memorable experience and is a great conversation-starter.”</p>
-                    <p>Coffee House Cafe goes beyond the traditional specialty coffee shop by encouraging guests to bring their children, and setting up classNameic arcade games to create an atmosphere that is fun and exciting no matter how old you are.</p>
-                    <p>If you are interested in joining our team, please fill out the form below.</p>
+            <div className="career-text">
+                <div className="text-center m-5 p-5" id="topparagraph" data-aos="fade-down"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1000">
+                    <h2 className="pb-4"><q>WORK WITH US NOW</q></h2>
+                    <p className="pb-4">Coffee House has been a caring company from the very beginning. We care about who we are, who we serve and what we do. We want every guest to walk away from a Coffee House having experienced genuine and sincere customer service that puts a smile on their face and makes them just plain feel better.</p>
+                    <p className="pb-4">Coffee shops occupy an important space in many of our lives because of their unique ability to fulfill so many of our needs: socializing, studying, working, resting, reading — in an atmosphere that suits our tastes and makes us feel like we belong. At their best, coffee shops are places that meet the needs of a community, while giving communities the space they need to get together.</p>
+                    <p className="pb-4">This sense of community is what Coffee House Cafe is all about. In fact, the atmosphere that makes Just Love Coffee Cafe so special was created to be a complete 180 from the stuffy reputation that specialty coffee shops rightly or wrongly deserve.</p>
                 </div>
-                <div className="col-md-6">
-                    <div className="card"  data-aos="flip-left"
-                        data-aos-easing="ease-out-cubic"
-                        data-aos-duration="3000">
-                        <img src="./images/about.jpg" alt=""/>
+                <div className="row" id="column">
+                    <div className="row1 col-md-6">
+                        <h3>GOAL: PUT A SMILE ON EVERY FACE</h3>
+                        <p>“We wanted our space to be welcoming to everyone, whether they like high-end coffee or like Folgers,” says Jason Smith, Roastmaster with Coffee House Cafe. “We worked hard to create an atmosphere that went beyond coffee, as well — from the charitable nature of our brand and the inclusivity of our design that opens the space to a wide variety of social and independent activity, to the playful nature of our food menu that really creates a memorable experience and is a great conversation-starter.”</p>
+                        <p>Coffee House Cafe goes beyond the traditional specialty coffee shop by encouraging guests to bring their children, and setting up classNameic arcade games to create an atmosphere that is fun and exciting no matter how old you are.</p>
+                        <p>If you are interested in joining our team, please fill out the form below.</p>
+                    </div>
+                    <div className="row2 col-md-6">
+                        <div className="card"  data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="3000">
+                            <img src="./images/about.jpg" alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>
