@@ -8,13 +8,13 @@ function Home(){
       <div className="home-content">      
             <section className="container">
                 <div className="row">
-                  <div className="text-banner col-md-7 my-auto" data-aos="fade-right" >
+                  <div className="row1 text-banner col-md-7 my-auto" data-aos="fade-right" >
                       <h1 className="fw-bold">Life is not better without Coffee</h1>
                       <h4>Put some Coffee in your day.</h4>
                       <h5>Eat. Drink. Enjoy.</h5>
                       
                   </div>
-                  <div className="col-md-5 " data-aos="fade-left">
+                  <div className="row2 col-md-5 " data-aos="fade-left">
                       <img src="./images/coffee.png" className="img-fluid" />
                   </div>
                 </div>

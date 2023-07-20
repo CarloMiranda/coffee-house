@@ -43,8 +43,9 @@ export const OrderItems = () => {
     
     return(
     <section className='order-items'>
-        <button type="button" className="btn btn-primary position-absolute bottom-0 end-0 me-5 mb-5 p-3 rounded-5 position-fixed" data-bs-toggle="modal" data-bs-target="#exampleModal" id="order">
-        <FontAwesomeIcon icon={faShoppingCart} /> <span className='cart-text'>Your Orders</span>
+        <button type="button" className="cart-btn btn btn-primary position-absolute bottom-0 end-0 me-5 mb-5 p-3 rounded-5 position-fixed" data-bs-toggle="modal" data-bs-target="#exampleModal" id="order">
+                <span className="cart-icon"><FontAwesomeIcon icon={faShoppingCart} /></span> 
+                <span className='cart-text'>Your Orders</span>
                 <span className="position-absolute badge rounded-pill bg-danger">
                 {totalItems}</span>
         </button>

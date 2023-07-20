@@ -15,7 +15,7 @@ export const CartItem = (props) => {
     };
 
     return (
-        <div className="added-items border mb-3">
+        <div className="cart-items border mb-3">
             <div className="row align-items-center">
                 <div className="col">
                         <img className=" img-fluid rounded-3" src={productImage}

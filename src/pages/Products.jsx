@@ -57,16 +57,16 @@ function Products(){
             </header>
 
             <div className="menu text-center bg-primary p-3" ref={menuRef} id="menu-top">
-                <button onClick={() => showCategory('all')} className="button p-1 col-2 border rounded-3" data-aos="fade-right">
+                <button onClick={() => showCategory('all')} className="menu-button p-1 col-2 border rounded-3" data-aos="fade-right">
                     All
                 </button>
-                <button onClick={() => showCategory('popular')} data-id="popularitems" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-right">
+                <button onClick={() => showCategory('popular')} data-id="popularitems" className="menu-button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-right">
                     Popular Items
                 </button>
-                <button onClick={() => showCategory('beverages')} data-id="beverages" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
+                <button onClick={() => showCategory('beverages')} data-id="beverages" className="menu-button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
                     Beverages
                 </button>
-                <button onClick={() => showCategory('meals')} data-id="meals" className="button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
+                <button onClick={() => showCategory('meals')} data-id="meals" className="menu-button p-1 border col-md-2 rounded-3 ms-3" data-aos="fade-left">
                     Meals
                 </button>
             </div>

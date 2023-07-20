@@ -39,6 +39,10 @@ html, body {
     background-color: #b6acac;
     color: black;
   }
+/* layout */
+.navbar {
+  z-index: 99;
+}
 
 /* Home */
 .btn-link {
@@ -130,6 +134,10 @@ html, body {
     text-align: center;
   }
 
+  .home-content img {
+    margin-top: -50px !important;
+  }
+
   .home-content p {
     font-size: 7px;
   }
@@ -139,17 +147,17 @@ html, body {
   }
 
   .menu-item {
-    width: 120px !important;
-    height: 70px;
+    width: 140px !important;
+    height: 90px;
   }
 
   .menu-item p {
-    font-size: 9px;
+    font-size: 12px;
   }
   
   .menu-item img {
-    width: 40px;
-    height: 60px;
+    width: 65px;
+    height: 80px;
   }
 
   .products {
@@ -163,32 +171,34 @@ html, body {
   .price {
     bottom: -15%;
   }
-  
-  .added-items {
-    height: 60px;
-    display: flex !important;
-    width: 100% !important;
-  }
-  
-  .added-items img {
-    position: relative;
-    width: 30px !important;
-    height: 35px !important;
-  }
-  
-  .added-items .col {
-    position: relative;
-  }
-  
-  .added-items p, button {
-    font-size: 8px !important;
+
+  .cart-btn {
+    width: 50px;
   }
 
-  .order-items {
-    width: 50px;
-    height: 50px;
-    font-size: 10px !important;
-  }  
+  .cart-icon {
+    font-size: 15px;
+  }
+  
+  .cart-items {
+    height: 75px;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-items img {
+    width: 50px !important;
+    height: 55px !important;
+  }
+  
+  .cart-items .col {
+    width: 80px;
+  }
+  
+  .cart-items p, button {
+    font-size: 11px !important;
+  }
   
   .order-items input {
     font-size: 10px !important;
@@ -199,7 +209,7 @@ html, body {
   }
 
   .about-text {
-    font-size: 9px !important;
+    font-size: 12px !important;
   }
 
   .row1 {
