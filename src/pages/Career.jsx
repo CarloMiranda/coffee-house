@@ -35,12 +35,12 @@ function Career(){
                   <h1 className="mb-4"><b>Job Application</b></h1>
                   <div className="mb-4">
                     <h5>Applaying For Possition</h5>
-                        <input type="checkbox" id="option2"/><span> </span>
-                        <label htmlFor="option2" className="form-text" id="basic-addon4"> Barista</label><span> </span>
-                        <input type="checkbox" id="option2"/><span> </span>
-                        <label htmlFor="option2" className="form-text" id="basic-addon4"> Waiter</label><span> </span>
-                        <input type="checkbox" id="option2"/><span> </span>
-                        <label htmlFor="option2" className="form-text" id="basic-addon4"> Line Cook</label><span> </span>
+                        <input type="checkbox" id="barista"/><span> </span>
+                        <label htmlFor="barista" className="form-text"> Barista</label><span> </span>
+                        <input type="checkbox" id="waiter"/><span> </span>
+                        <label htmlFor="waiter" className="form-text"> Waiter</label><span> </span>
+                        <input type="checkbox" id="line-cook"/><span> </span>
+                        <label htmlFor="line-cook" className="form-text"> Line Cook</label><span> </span>
                   </div>
                     <div className="row">
                       <div className="col-md-6">
@@ -67,78 +67,78 @@ function Career(){
                     <div>
                         <p>Are you over the age of 18?</p>        
                             <input type="checkbox" id="option1"/><span> </span>
-                            <label htmlFor="option1" className="form-text" id="basic-addon4">Yes</label>
+                            <label htmlFor="option1" className="form-text">Yes</label>
                         <br/>
                             <input type="checkbox" id="option2"/><span> </span>
-                            <label htmlFor="option2" className="form-text" id="basic-addon4">No</label>
+                            <label htmlFor="option2" className="form-text">No</label>
                         <br/>
                     </div>
                     <div>
                         <p>Do you have a reliable way to get to and from work?</p>        
-                            <input type="checkbox" id="option1"/><span> </span>
-                            <label htmlFor="option1" className="form-text" id="basic-addon4">Yes</label>
+                            <input type="checkbox" id="option3"/><span> </span>
+                            <label htmlFor="option3" className="form-text">Yes</label>
                         <br/>
-                            <input type="checkbox" id="option2"/><span> </span>
-                            <label htmlFor="option2" className="form-text" id="basic-addon4">No</label>
+                            <input type="checkbox" id="option4"/><span> </span>
+                            <label htmlFor="option4" className="form-text">No</label>
                         <br/>
                     </div>
                     <div>
                         <p>Education</p>        
-                            <input type="checkbox" id="option1"/><span> </span>
-                            <label htmlFor="option1" className="form-text" id="basic-addon4">In High School</label>
+                            <input type="checkbox" id="option5"/><span> </span>
+                            <label htmlFor="option5" className="form-text">In High School</label>
                         <br/>
-                            <input type="checkbox" id="option2"/><span> </span>
-                            <label htmlFor="option2" className="form-text" id="basic-addon4">High School Graduate</label>
+                            <input type="checkbox" id="option6"/><span> </span>
+                            <label htmlFor="option6" className="form-text">High School Graduate</label>
                         <br/>
-                            <input type="checkbox" id="option1"/><span> </span>
-                            <label htmlFor="option1" className="form-text" id="basic-addon4">Some College</label>
+                            <input type="checkbox" id="option7"/><span> </span>
+                            <label htmlFor="option7" className="form-text">Some College</label>
                         <br/>
-                            <input type="checkbox" id="option2"/><span> </span>
-                            <label htmlFor="option2" className="form-text" id="basic-addon4">Complete College Degree or More</label>
+                            <input type="checkbox" id="option8"/><span> </span>
+                            <label htmlFor="option8" className="form-text">Complete College Degree or More</label>
                         <br/>
                     </div>
                     <div>
                         <p>Are you over the age of 18?</p>        
-                            <input type="checkbox" id="option1"/><span> </span>
-                            <label htmlFor="option1" className="form-text" id="basic-addon4">Full-time</label>
+                            <input type="checkbox" id="option9"/><span> </span>
+                            <label htmlFor="option9" className="form-text">Full-time</label>
                         <br/>
-                            <input type="checkbox" id="option2"/><span> </span>
-                            <label htmlFor="option2" className="form-text" id="basic-addon4">Part-Time</label>
+                            <input type="checkbox" id="option10"/><span> </span>
+                            <label htmlFor="option10" className="form-text">Part-Time</label>
                         <br/>
                     </div>
                     <div>
                         <p>Are you willing to cross-train between kitchen and barista position?</p>        
-                            <input type="checkbox" id="option1"/><span> </span>
-                            <label htmlFor="option1" className="form-text" id="basic-addon4">Yes</label>
+                            <input type="checkbox" id="option11"/><span> </span>
+                            <label htmlFor="option11" className="form-text">Yes</label>
                         <br/>
-                            <input type="checkbox" id="option2"/><span> </span>
-                            <label htmlFor="option2" className="form-text" id="basic-addon4">No</label>
+                            <input type="checkbox" id="option12"/><span> </span>
+                            <label htmlFor="option12" className="form-text">No</label>
                         <br/>
                     </div>
                     <div>
-                        <label htmlFor="comments" className="form-label">Which days and hours are available to work?</label>
+                        <label htmlFor="comments1" className="form-label">Which days and hours are available to work?</label>
                         <br/>
-                        <textarea className="form-control" id="comments"></textarea>
+                        <textarea className="form-control" id="comments1"></textarea>
                         <br/>
-                        <label htmlFor="comments" className="form-label">Please explain any previous work experience below.</label>
+                        <label htmlFor="comments2" className="form-label">Please explain any previous work experience below.</label>
                         <br/>
-                        <textarea className="form-control" id="comments"></textarea>
-                        <span className="form-text" id="basic-addon4">(Disregard if you uploading a resume)</span>
+                        <textarea className="form-control" id="comments2"></textarea>
+                        <span className="form-text">(Disregard if you uploading a resume)</span>
                         <br/>
-                        <label htmlFor="comments" className="form-label">Describe an instance when you went above and beyond for a customer (or stranger).</label>
+                        <label htmlFor="comments3" className="form-label">Describe an instance when you went above and beyond for a customer (or stranger).</label>
                         <br/>
-                        <textarea className="form-control" id="comments"></textarea>
+                        <textarea className="form-control" id="comments3"></textarea>
                         <br/>
-                        <label htmlFor="comments" className="form-label">Why do you want to work for Coffee House?</label>
+                        <label htmlFor="comments4" className="form-label">Why do you want to work for Coffee House?</label>
                         <br/>
-                        <textarea className="form-control" id="comments"></textarea>
+                        <textarea className="form-control" id="comments4"></textarea>
                     </div>
                     <div className="form-group">
                         <label htmlFor="fileUpload" className="form-label">Upload Resume</label>
                         <br/>
                         <input type="file" className="form-control-file" id="fileUpload" accept=".pdf,.doc,.txt"/>
                         <br/>
-                        <span className="form-text" id="basic-addon4">Max. file size: 50 MB.</span>
+                        <span className="form-text">Max. file size: 50 MB.</span>
                     </div>  
                   <hr/>
                     <button className="col-md-4 bg-primary text-light border border-white p-2 rounded">SUBMIT</button>

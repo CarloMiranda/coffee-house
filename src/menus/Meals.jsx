@@ -30,10 +30,10 @@ export const Meals = (props) => {
 
     return(
     <section>
-        <div className="">
+        <div className='products'>
             <button onClick={() => {addToCart(id);
                                     openMessage()}} 
-                className="add-item menu-item my-3 ms-5 col-md-2 text-start d-flex border rounded-4 shadow">
+                className="add-item menu-item text-start d-flex border rounded-4 shadow">
                     <span className="position-absolute badge rounded-pill bg-danger">
                         { cartItemAmount > 0 && <> {cartItemAmount}</>}
                     </span>

@@ -1,9 +1,8 @@
 function Contact(){
 
     return(
-    <div className="container">
         <section className="container">
-              <div className="row justify-content-center border rounded-5 m-5 bg-light p-5"  data-aos="flip-up"> 
+              <div className="contact row justify-content-center border rounded-5 bg-light"  data-aos="flip-up"> 
                 <div className="col-md-5">
                     <div className="heading">
                         <h1>Contact Us</h1>
@@ -22,7 +21,6 @@ function Contact(){
                 </div>  
               </div>
         </section>
-    </div>
     )
 }
 

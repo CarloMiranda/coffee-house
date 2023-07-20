@@ -39,11 +39,11 @@ export const PopularItems = () => {
             }, 800);
           };
             return (
-                <button
-                    key={id}
+                <div key={id} className="products">
+                  <button
                     onClick={() => {addToCart(id);
                                     openMessage()}}
-                    className="add-item menu-item my-3 ms-5 col-md-2 text-start d-flex border rounded-4 shadow">
+                    className="add-item menu-item text-start d-flex border rounded-4 shadow">
                     <span className="position-absolute badge rounded-pill bg-danger">
                         {cartItemAmount > 0 && <> {cartItemAmount}</>}
                     </span>
@@ -53,6 +53,7 @@ export const PopularItems = () => {
                         <p className="price">Php {price}</p>
                     </div>
                 </button>
+                </div>
             );
         })}
       </div>

@@ -80,9 +80,7 @@ function Products(){
                 <div id="popular" className="category">
                     <h3>Popular Items</h3>
                     <hr />
-                    <div>
                         <PopularItems />
-                    </div>
                 </div>
                 
                 <div id="beverages" className="category">

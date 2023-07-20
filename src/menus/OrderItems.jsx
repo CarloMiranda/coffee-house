@@ -41,12 +41,11 @@ export const OrderItems = () => {
     };
     
     return(
-    <section>
+    <section className='order-items'>
         <button type="button" className="btn btn-primary position-absolute bottom-0 end-0 me-5 mb-5 p-3 rounded-5 position-fixed" data-bs-toggle="modal" data-bs-target="#exampleModal" id="order">
-            🛒 Your Orders
+            🛒 <span className='cart-text'>Your Orders</span>
             <span className="position-absolute badge rounded-pill bg-danger">
-                {totalItems}
-            <span className="visually-hidden">Added Items</span></span>
+                {totalItems}</span>
         </button>
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
@@ -65,24 +64,23 @@ export const OrderItems = () => {
                                                     <div className="row">                            
                                                         <div className="col-lg-7">                                                                                       
                                                             <div className="d-flex justify-content-between align-items-center mb-4">
-                                                            <p className="mb-0" id="selected-count">
-                                                                <b>You have {totalItems} {totalItems === 0 ? 'no order yet' : 'orders'}!</b>
-                                                            </p>
-                                                                    <div className='d-flex'>
-                                                                     
-                                                                        <p className="mb-0"><span className="text-muted">Sort by:</span> <a href="#!"
-                                                                        className="text-body">Qty <i className="fas fa-angle-down mt-1"></i></a></p>
-                                                                    </div>
+                                                                <p className="mb-0" id="selected-count">
+                                                                    <b>You have {totalItems} {totalItems === 0 ? 'no order yet' : 'orders'}!</b>
+                                                                </p>
+                                                                <div className='d-flex'>
+                                                                    <p className="mb-0"><span className="text-muted">Sort by:</span> 
+                                                                    <a href="#!" className="text-body">Qty <i className="fas fa-angle-down mt-1"></i></a></p>
+                                                                </div>
                                                             </div>   
-                                                                <div className="cart">
-                                                                    <div className="cardItems">
-                                                                        {sortedItems.map((product) => {
-                                                                            if (cartItems[product.id] !== 0) {
-                                                                                return <CartItem key={product.id} data={product} />;
-                                                                            }
-                                                                        })}
-                                                                    </div>
-                                                                </div>                            
+                                                            <div className="cart">
+                                                                <div className="cardItems">
+                                                                    {sortedItems.map((product) => {
+                                                                        if (cartItems[product.id] !== 0) {
+                                                                            return <CartItem key={product.id} data={product} />;
+                                                                        }
+                                                                    })}
+                                                                </div>
+                                                            </div>                            
                                                         </div>            
                                                         <div className="col-lg-5">                                
                                                             <div className="card bg-primary text-white rounded-3">
