@@ -1,4 +1,11 @@
+import React, { useState } from 'react';
+
 function About(){
+  const [isSpanVisible, setSpanVisible] = useState(false);
+
+  function learnMore() {
+    setSpanVisible(!isSpanVisible);
+  }
     return(
       <section className="about container">
           <div className="heading text-center m-4 p-4" 
@@ -16,7 +23,7 @@ function About(){
                     for me and I am so thankful for your patronage which allows me to do this. 
                     I wanted to share a little about our coffees, and why I think they are so 
                     special. First of all, we buy our coffee from only the most reputable farms 
-                    and mills in Kona. Being a teacher in Kona for three decades, I taught some 
+                    and mills in Kona.<span style={{ display: isSpanVisible ? 'block' : 'none'}}> Being a teacher in Kona for three decades, I taught some 
                     of the farmers and some of their parents too - which goes a long way.
                     Most boutique coffee companies sell an estate coffee, called this because 
                     every bean comes from their estate which may be an acre or two of planted 
@@ -28,11 +35,11 @@ function About(){
                     inconsistent roast – the larger beans might not be roasted enough, while 
                     the smaller beans are roasted too much and taste burnt. Our “Estate” coffee 
                     is from a single grade so you get a much more uniform roast at the perfect 
-                    temperature for that size. 
+                    temperature for that size.</span> 
                   </p>
               
                   <div className="buttons p-2">
-                      <button data-id="about-btn" className="about-btn p-1 rounded">Learn More.</button>
+                      { isSpanVisible ? '' : <button onClick={learnMore} className="about-btn p-1 rounded text-primary">Read More.</button>}
                   </div>
               </div>
               <div className="row2 col-md-5">

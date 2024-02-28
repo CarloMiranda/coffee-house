@@ -9,18 +9,18 @@ function Home(){
             <section className="container">
                 <div className="row">
                   <div className="row1 text-banner col-md-7 my-auto" data-aos="fade-right" >
-                      <h1 className="fw-bold">Life is not better without Coffee</h1>
+                      <h1 className="fw-bolder text-primary">Life is not better without Coffee</h1>
                       <h4>Put some Coffee in your day.</h4>
-                      <h5>Eat. Drink. Enjoy.</h5>
+                      <h5 className='text-secondary'>Eat. Drink. Enjoy.</h5>
                       
                   </div>
-                  <div className="row2 col-md-5 " data-aos="fade-left">
+                  <div className="row2 col-md-5" data-aos="fade-left">
                       <img src="./images/coffee.png" className="img-fluid" />
                   </div>
                 </div>
             </section>
             <div className="order-btn d-flex justify-content-center">
-              <Link to="/products" className="btn-link border p-3 rounded bg-light shadow"><strong>Order Online</strong></Link>
+              <Link to="/products" className="btn-link border p-3 rounded bg-light shadow"><strong>Order Now</strong></Link>
             </div>
             <div className="md-12 text-center m-5 p-5"  
                         data-aos="fade-zoom-in"

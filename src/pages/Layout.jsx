@@ -37,6 +37,7 @@ function Layout(){
                 <Link to="/career" className={`nav-link mx-3 ${ (location.pathname === `/career`) ? `fw-bold active`: ``}`}>Career</Link>
                 
             </div>
+                <Link to="/login" className={`nav-link mx-3 bg-primary px-3 py-2 rounded text-white fw-bold ${ (location.pathname === `/login`) ? `fw-bold active`: ``}`}>Login</Link>
         </div>
     </nav>
 
