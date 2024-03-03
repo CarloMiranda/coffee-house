@@ -20,6 +20,8 @@ function Layout(){
             document.title = 'Contact | Coffee House';
         } else if (location.pathname === '/career') {
             document.title = 'Career | Coffee House';
+        } else if (location.pathname === '/login') {
+            document.title = 'Login | Coffee House';
         }
     }, [location]);
     return(

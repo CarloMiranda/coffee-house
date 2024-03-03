@@ -7,6 +7,7 @@ import NoFound from './NoFound';
 import Layout from './Layout';
 import Blogs from './Blogs';
 import Career from './Career';
+import Login from './Login';
 import { ShopContextProvider } from '../context/ShopContext';
 
 function Index(){
@@ -21,7 +22,9 @@ function Index(){
                         <Route path="/blogs" element={<Blogs />} />
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/career" element={<Career />} />
+                        <Route path="/login" element={<Login />} />
                         <Route path="*" element={<NoFound />} />
+                        
                     </Route>
                 </Routes>
             </ShopContextProvider>
